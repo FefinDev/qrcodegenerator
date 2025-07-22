@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Generador de Códigos QR</title>
+    <title>Fech QR Generator - Generador rápido y fácil de códigos QR</title>
+    <meta name="description" content="Generá códigos QR fácilmente con Fech QR Generator. Online, gratis y con opción para descargar la app Android (.apk)." />
+    <meta name="keywords" content="fech qr generator, generador qr, código qr, app qr android, crear qr gratis" />
     <link rel="icon" href="favicon.png" type="image/png" />
 
     <style>
@@ -22,9 +24,17 @@
             min-height: 100vh;
         }
         h1 {
-            margin-bottom: 1rem;
+            margin-bottom: 0.3rem;
             font-size: 2rem;
             text-align: center;
+        }
+        p.lead {
+            max-width: 400px;
+            margin: 0 auto 1.5rem auto;
+            color: #bbb;
+            font-size: 1rem;
+            text-align: center;
+            line-height: 1.4;
         }
         .container {
             background: #2a2a2a;
@@ -99,12 +109,20 @@
             h1 {
                 font-size: 1.5rem;
             }
+            p.lead {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>Generador de Código QR</h1>
+    <h1>Fech QR Generator: Generá códigos QR gratis y rápido</h1>
+    <p class="lead">
+        Usá nuestra web para crear códigos QR para URLs, texto y más.  
+        Descargá la app Android para generar QR directamente desde tu celular.
+    </p>
+
     <div class="container">
         <input type="text" id="texto" placeholder="Escribí el texto o URL..." />
 
@@ -126,7 +144,6 @@
     <script>
         const input = document.getElementById('texto');
         const qrContainer = document.getElementById('qrcode');
-        const qrBox = document.getElementById('qrcode-container');
         const textoQR = document.getElementById('textoQR');
 
         let qr;
